@@ -16,7 +16,7 @@ public class PlayerStates : MonoBehaviour {
         {
             if (_instanced == null)
             {
-                _instanced = new GameObject("shits broken yo").AddComponent<PlayerStates>();
+                _instanced = new GameObject("StateManager").AddComponent<PlayerStates>();
             }
             return _instanced;
         }

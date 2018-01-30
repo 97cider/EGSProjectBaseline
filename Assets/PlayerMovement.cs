@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
         PlayerStates.Instance.Horizontal = Horizontal.idle;
         PlayerStates.Instance.Vertical = Vertical.OnGround;
         PlayerStates.Instance.DirectionFacing = DirectionFacing.Right;
-        PlayerStates.Instance.Action = Action.Idle;
+        PlayerStates.Instance.Action = PlayerAction.Idle;
 
 		//TODO: Move to Update()(hehe funi mem)
 		rbody = player.GetComponent<Rigidbody2D> ();

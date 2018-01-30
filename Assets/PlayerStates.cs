@@ -28,7 +28,7 @@ public class PlayerStates : MonoBehaviour {
     public Horizontal Horizontal;
     public Vertical Vertical;
     public DirectionFacing DirectionFacing;
-    public Action Action;
+    public PlayerAction Action;
 }
     public enum Horizontal
     {
@@ -57,7 +57,7 @@ public class PlayerStates : MonoBehaviour {
     //game balanced, a heavy attack can stop all momentum of the player
 
     //interacting is prolly just going to be looting and gathering materials
-    public enum Action
+    public enum PlayerAction
     {
         Idle,
         LightAttack,

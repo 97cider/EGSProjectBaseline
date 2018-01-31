@@ -1,8 +1,16 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 9007d9f27fc376a4c9415a2e51b11dae
 timeCreated: 1517454702
 licenseType: Free
 DefaultImporter:
+=======
+guid: 5501b8af73ec6564592a411e95f8a406
+timeCreated: 1517371601
+licenseType: Free
+DefaultImporter:
+  externalObjects: {}
+>>>>>>> meta changes
   userData: 
   assetBundleName: 
   assetBundleVariant: 

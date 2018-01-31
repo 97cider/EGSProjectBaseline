@@ -38,10 +38,13 @@ GameObject:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Co-op working
 =======
 >>>>>>> PlayerCommit
+=======
+>>>>>>> Co-op working
   - component: {fileID: 114007127240748994}
 =======
 >>>>>>> Co-op working
@@ -51,11 +54,15 @@ GameObject:
   - component: {fileID: 114007127240748994}
 >>>>>>> PlayerCommit
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Co-op working
 =======
   - component: {fileID: 114007127240748994}
 =======
 >>>>>>> Co-op working
 >>>>>>> Co-op working
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   - component: {fileID: 114007127240748994}
@@ -92,6 +99,8 @@ GameObject:
 >>>>>>> Co-op working
 =======
 >>>>>>> PlayerCommit
+=======
+>>>>>>> Co-op working
   m_Layer: 0
   m_Name: PLAYER
   m_TagString: Player
@@ -196,12 +205,16 @@ CapsuleCollider2D:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Co-op working
 =======
 >>>>>>> Co-op working
 =======
 >>>>>>> PlayerCommit
 =======
 >>>>>>> Co-op working
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -215,6 +228,8 @@ CapsuleCollider2D:
 =======
 >>>>>>> PlayerCommit
 >>>>>>> PlayerCommit
+=======
+>>>>>>> Co-op working
 --- !u!114 &114007127240748994
 =======
 --- !u!114 &114080057778451738
@@ -242,6 +257,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Co-op working
 =======
@@ -268,7 +284,13 @@ MonoBehaviour:
 =======
 >>>>>>> Co-op working
 =======
+>>>>>>> Co-op working
+=======
 >>>>>>> PlayerCommit
+=======
+=======
+>>>>>>> Co-op working
+>>>>>>> Co-op working
 --- !u!114 &114106100593946114
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -36,23 +36,30 @@ public class PlayerMovement : MonoBehaviour
 		Debug.Log (h);
 
 		//Add force, which accelerates and gibs velocity
-		if (Mathf.Abs (rbody.velocity.magnitude) < movementSpeed) {
+		if (Mathf.Abs (rbody.velocity.magnitude) < movementSpeed)
+        {
 			rbody.AddForce ((Vector2.right * horizontalMult) * h);
 		}
 
-		//Basic directional triggers
-		if(h < 0.0f)
-			PlayerStates.Instance.DirectionFacing = DirectionFacing.Left; 
-		else if(h > 0.0f)
-			PlayerStates.Instance.DirectionFacing = DirectionFacing.Right;
-
-		//Check velocity for going left, right or idle
-		if (rbody.velocity.x < 0.0f)
-			PlayerStates.Instance.Horizontal = Horizontal.mLeft;
-		else if (rbody.velocity.x > 0.0f)
-			PlayerStates.Instance.Horizontal = Horizontal.mRight;
-		else
-			PlayerStates.Instance.Horizontal = Horizontal.idle;
+        //Basic directional triggers
+        if (h < 0.0f)
+        {
+            PlayerStates.Instance.DirectionFacing = DirectionFacing.Left;
+        }
+        else if (h > 0.0f){
+            PlayerStates.Instance.DirectionFacing = DirectionFacing.Right;
+        }
+        //Check velocity for going left, right or idle
+        if (rbody.velocity.x < 0.0f)
+        {
+            PlayerStates.Instance.Horizontal = Horizontal.mLeft;
+        }
+        else if (rbody.velocity.x > 0.0f)
+        {
+            PlayerStates.Instance.Horizontal = Horizontal.mRight;
+        }
+        else
+            PlayerStates.Instance.Horizontal = Horizontal.idle;
 
 		//Check if we in the air or not
 		if (Input.GetAxis ("Jump") > 0.0f && PlayerStates.Instance.Vertical != Vertical.InAir) {

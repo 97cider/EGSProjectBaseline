@@ -30,9 +30,13 @@ GameObject:
   - component: {fileID: 114148864963675000}
   - component: {fileID: 114774080130251446}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 114007127240748994}
 =======
 >>>>>>> Co-op working
+=======
+  - component: {fileID: 114007127240748994}
+>>>>>>> PlayerCommit
   m_Layer: 0
   m_Name: PLAYER
   m_TagString: Untagged
@@ -129,6 +133,9 @@ CapsuleCollider2D:
   m_Size: {x: 0.25925925, y: 0.25925925}
   m_Direction: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> PlayerCommit
 --- !u!114 &114007127240748994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -147,8 +154,11 @@ MonoBehaviour:
   maxY: 0
   minX: 0
   maxX: 0
+<<<<<<< HEAD
 =======
 >>>>>>> Co-op working
+=======
+>>>>>>> PlayerCommit
 --- !u!114 &114106100593946114
 MonoBehaviour:
   m_ObjectHideFlags: 1

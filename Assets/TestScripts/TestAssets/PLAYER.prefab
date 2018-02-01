@@ -125,7 +125,23 @@ GameObject:
 =======
 =======
 >>>>>>> Co-op working
+<<<<<<< HEAD
 >>>>>>> Co-op working
+=======
+=======
+  - component: {fileID: 4264397085332908}
+  - component: {fileID: 212903703136826198}
+  - component: {fileID: 61122401095569964}
+  - component: {fileID: 50278952272774740}
+  - component: {fileID: 58680201714012496}
+  - component: {fileID: 70790004876384806}
+  - component: {fileID: 114191935063413676}
+  - component: {fileID: 114080057778451738}
+  - component: {fileID: 114155101570095774}
+  - component: {fileID: 114636835470887132}
+  - component: {fileID: 114319769578315288}
+>>>>>>> Initial DN Net
+>>>>>>> Initial DN Net
   m_Layer: 0
   m_Name: PLAYER
   m_TagString: Player
@@ -233,8 +249,11 @@ CapsuleCollider2D:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Co-op working
+=======
+>>>>>>> Initial DN Net
 =======
 >>>>>>> Co-op working
 =======
@@ -382,7 +401,11 @@ MonoBehaviour:
     i14: 70
     i15: 129
   m_ServerOnly: 0
+<<<<<<< HEAD
   m_LocalPlayerAuthority: 1
+=======
+  m_LocalPlayerAuthority: 0
+>>>>>>> Initial DN Net
 --- !u!114 &114155101570095774
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -429,8 +452,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PLAYER: {fileID: 1679944476879366}
+<<<<<<< HEAD
   jumpHeight: 150
 --- !u!114 &114488870831412912
+=======
+  jumpHeight: 15
+--- !u!114 &114636835470887132
+>>>>>>> Initial DN Net
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -438,6 +466,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1679944476879366}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -462,6 +491,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d7397009a4c514fa90640f062d5499, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+  m_Script: {fileID: 11500000, guid: b8d7397009a4c514fa90640f062d5499, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> Initial DN Net
 --- !u!212 &212903703136826198
 SpriteRenderer:
   m_ObjectHideFlags: 1

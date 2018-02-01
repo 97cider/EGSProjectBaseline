@@ -78,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
             if (PlayerStates.Instance.Vertical == Vertical.OnGround)
             {
                 PlayerStates.Instance.Vertical = Vertical.InAir;
-                rbody.AddForce(new Vector2(0, jumpHeight));
+                rbody.AddForce(new Vector2(0, jumpHeight), ForceMode2D.Impulse);
             }
         }
         isJumping = false;

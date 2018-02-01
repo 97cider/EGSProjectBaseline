@@ -38,7 +38,7 @@ public class isGrounded : NetworkBehaviour
         {
             if (canJump)
             {
-                Debug.Log("Update: The Player should be able to jump");
+                Debug.Log("JUMP BOY");
                 rbody.AddForce(Vector2.up * jumpHeight);
                 canJump = false;
             }

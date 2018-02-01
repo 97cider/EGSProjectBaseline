@@ -155,7 +155,7 @@ MonoBehaviour:
     i14: 70
     i15: 129
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  m_LocalPlayerAuthority: 1
 --- !u!114 &114155101570095774
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PLAYER: {fileID: 1679944476879366}
-  jumpHeight: 15
+  jumpHeight: 500
 --- !u!114 &114636835470887132
 MonoBehaviour:
   m_ObjectHideFlags: 1

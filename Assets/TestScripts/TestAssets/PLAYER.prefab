@@ -39,12 +39,15 @@ GameObject:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Co-op working
 =======
 >>>>>>> PlayerCommit
 =======
 >>>>>>> Co-op working
+=======
+>>>>>>> PlayerCommit
   - component: {fileID: 114007127240748994}
 =======
 >>>>>>> Co-op working
@@ -64,11 +67,15 @@ GameObject:
 >>>>>>> Co-op working
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> PlayerCommit
 =======
   - component: {fileID: 114007127240748994}
 =======
 >>>>>>> Co-op working
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> Co-op working
   - component: {fileID: 114007127240748994}
@@ -101,6 +108,11 @@ GameObject:
 >>>>>>> PlayerCommit
 =======
 >>>>>>> Co-op working
+=======
+  - component: {fileID: 114007127240748994}
+>>>>>>> PlayerCommit
+>>>>>>> PlayerCommit
+>>>>>>> PlayerCommit
   m_Layer: 0
   m_Name: PLAYER
   m_TagString: Player
@@ -206,6 +218,7 @@ CapsuleCollider2D:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Co-op working
 =======
@@ -219,17 +232,23 @@ CapsuleCollider2D:
 =======
 =======
 >>>>>>> PlayerCommit
->>>>>>> PlayerCommit
-=======
->>>>>>> Co-op working
-=======
->>>>>>> Co-op working
-=======
 =======
 >>>>>>> PlayerCommit
 >>>>>>> PlayerCommit
 =======
 >>>>>>> Co-op working
+=======
+>>>>>>> Co-op working
+=======
+=======
+>>>>>>> PlayerCommit
+>>>>>>> PlayerCommit
+=======
+>>>>>>> Co-op working
+=======
+=======
+>>>>>>> PlayerCommit
+>>>>>>> PlayerCommit
 --- !u!114 &114007127240748994
 =======
 --- !u!114 &114080057778451738
@@ -258,6 +277,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Co-op working
 =======
@@ -282,6 +302,8 @@ MonoBehaviour:
 =======
 >>>>>>> Co-op working
 =======
+>>>>>>> PlayerCommit
+=======
 >>>>>>> Co-op working
 =======
 >>>>>>> Co-op working
@@ -291,6 +313,12 @@ MonoBehaviour:
 =======
 >>>>>>> Co-op working
 >>>>>>> Co-op working
+=======
+=======
+>>>>>>> Co-op working
+=======
+>>>>>>> PlayerCommit
+>>>>>>> PlayerCommit
 --- !u!114 &114106100593946114
 MonoBehaviour:
   m_ObjectHideFlags: 1

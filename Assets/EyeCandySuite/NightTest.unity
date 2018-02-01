@@ -236,7 +236,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1721367334
+  randomSeed: 1265983879
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3873,7 +3873,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -990310251
+  randomSeed: -1831247725
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -8888,7 +8888,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.4, y: 0.38}
+  m_Size: {x: 6.4, y: 0.31}
   m_EdgeRadius: 0
 --- !u!212 &1971665794
 SpriteRenderer:

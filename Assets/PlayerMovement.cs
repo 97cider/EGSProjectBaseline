@@ -24,54 +24,63 @@ public class PlayerMovement : MonoBehaviour
         PlayerStates.Instance.Action = PlayerAction.Idle;
 
 		//TODO: Move to Update()(hehe funi mem)
+        //BOY I SURE HOPE YOU DONT PLAN ON MOVING THIS TO UPDATE()
+        //its fine on start (we can prolly dupe the function to an OnLoad() to assure this aswell)
 		rbody = player.GetComponent<Rigidbody2D> ();
 		AnimatorComponent = player.GetComponent<Animator> ();
 
     }
-
+    
 	//Basic ass movement idk if we actually want to stick with rigidbody/physics based movement
     void FixedUpdate()
     {
-		float h = Input.GetAxis("Horizontal");
-		Debug.Log (h);
-
-		//Add force, which accelerates and gibs velocity
-		if (Mathf.Abs (rbody.velocity.magnitude) < movementSpeed)
+        walk();
+        jump();
+    }
+    void Update()
+    {
+        //this is where we handle determining what the player does
+        //the actual actions (physics based) are done in a fixed update
+        horizontalMult = Input.GetAxisRaw("Horizontal");
+        if(horizontalMult != 0)
         {
-			rbody.AddForce ((Vector2.right * horizontalMult) * h);
-		}
-
-        //Basic directional triggers
-        if (h < 0.0f)
+            //flip that sprite
+            transform.localScale = new Vector3(horizontalMult, 1, 1);
+            PlayerStates.Instance.DirectionFacing = (DirectionFacing)horizontalMult;
+        }
+        if(horizontalMult == 0)
         {
-            PlayerStates.Instance.DirectionFacing = DirectionFacing.Left;
+            //play an idle animation or something i guess
         }
-        else if (h > 0.0f){
-            PlayerStates.Instance.DirectionFacing = DirectionFacing.Right;
-        }
-        //Check velocity for going left, right or idle
-        if (rbody.velocity.x < 0.0f)
+        if (Input.GetButtonDown("Jump"))
         {
-            PlayerStates.Instance.Horizontal = Horizontal.mLeft;
+            isJumping = true;
         }
-        else if (rbody.velocity.x > 0.0f)
+        if(rbody.velocity.y == 0)
         {
-            PlayerStates.Instance.Horizontal = Horizontal.mRight;
+            PlayerStates.Instance.Vertical = Vertical.OnGround;
         }
-        else
-            PlayerStates.Instance.Horizontal = Horizontal.idle;
-
-		//Check if we in the air or not
-		if (Input.GetAxis ("Jump") > 0.0f && PlayerStates.Instance.Vertical != Vertical.InAir) {
-			rbody.AddForce (Vector2.up * jumpHeight);
-		}
-
-		//This doesnt have to be what checks for 'done jumping' but it's here until we think of something better(collision check?)
-		//In fact, we have to check collision because of the grappling hook and climbing
-		if (rbody.velocity.y != 0) {
-			PlayerStates.Instance.Vertical = Vertical.InAir; 
-		} else {
-			PlayerStates.Instance.Vertical = Vertical.OnGround;
-		}
+    }
+    private void MovementAbility()
+    {
+        //yeah this can be used with the action system to do stuff
+        //i guess
+    }
+    //call these motions in the fixed update rather than have a messy Update
+    private void walk()
+    {
+        rbody.velocity = new Vector2(horizontalMult * movementSpeed, rbody.velocity.y);
+    }
+    private void jump()
+    {
+        if (isJumping)
+        {
+            if (PlayerStates.Instance.Vertical == Vertical.OnGround)
+            {
+                PlayerStates.Instance.Vertical = Vertical.InAir;
+                rbody.AddForce(new Vector2(0, jumpHeight));
+            }
+        }
+        isJumping = false;
     }
 }

@@ -140,8 +140,15 @@ GameObject:
   - component: {fileID: 114155101570095774}
   - component: {fileID: 114636835470887132}
   - component: {fileID: 114319769578315288}
+<<<<<<< HEAD
 >>>>>>> Initial DN Net
+<<<<<<< HEAD
 >>>>>>> Initial DN Net
+=======
+=======
+  - component: {fileID: 114488870831412912}
+>>>>>>> Network commit
+>>>>>>> Network commit
   m_Layer: 0
   m_Name: PLAYER
   m_TagString: Player
@@ -458,6 +465,7 @@ MonoBehaviour:
   PLAYER: {fileID: 1679944476879366}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   jumpHeight: 150
 --- !u!114 &114488870831412912
 =======
@@ -467,6 +475,10 @@ MonoBehaviour:
 >>>>>>> Working NetController
 --- !u!114 &114636835470887132
 >>>>>>> Initial DN Net
+=======
+  jumpHeight: 150
+--- !u!114 &114488870831412912
+>>>>>>> Network commit
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -475,6 +487,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Network commit
   m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

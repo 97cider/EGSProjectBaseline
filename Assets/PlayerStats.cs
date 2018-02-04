@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
 
+//a really basic inventory testing character
 public class PlayerStats : MonoBehaviour {
     public int health, maxhealth, speed, stamina, poise, lives;
     public void takeDamage(int i)

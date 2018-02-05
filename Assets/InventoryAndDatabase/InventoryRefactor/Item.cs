@@ -17,6 +17,8 @@ public class Item : MonoBehaviour {
     public string description;
     public string descriptionHeader;
     public GameObject worldObject;
+    //where the item can be found (should only used for crafting materials)
+    public BiomeLocator itemLocation;
     public EquipmentType itemType;
     //if it is a weapon, it will have a weapon type
     public WeaponType weaponType;

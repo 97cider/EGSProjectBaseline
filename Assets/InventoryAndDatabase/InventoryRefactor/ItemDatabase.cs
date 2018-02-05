@@ -24,6 +24,17 @@ public class ItemDatabase : MonoBehaviour {
         //if it fucks up
         return new Item();
     }
+    public Item FindItemByName(string name)
+    {
+        for (int i = 0; i < items.Count; i++)
+        {
+            if (items[i].name == name)
+            {
+                return CreateItem(items[i]);
+            }
+        }
+        return new Item();
+    }
 	public Item CreateItem(Item item)
     {
         item = Inventory.CopyItem(item);

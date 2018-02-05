@@ -9,8 +9,15 @@ public class ItemController : MonoBehaviour {
 		
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	void OnMouseEnter()
+    {
+        //show a tooltip or something
+    }
+    void OnMouseExit()
+    {
+        //disable a tooltip or something
+
+    }
+    //we can probably put equipping and deleting and stuff here
+    //but idk what we even doing yet 
 }

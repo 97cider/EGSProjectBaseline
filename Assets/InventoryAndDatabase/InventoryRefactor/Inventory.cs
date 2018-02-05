@@ -8,16 +8,86 @@ using UnityEngine.Events;
 using System.Reflection;
 
 public class Inventory : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public List<InventorySlot> items;
+    //this might be obsolete, as it would prolly work better to make it equal 
+    //to the AddStackedItem code for consistency and similarity
+    public InventorySlot GetUsableSlot()
+    {
+        //alright this is sorta up for debate
+        for(int i = 0; i < items.Count; i++)
+        {
+            if (!items[i].containsItem)
+            {
+                return items[i];
+            }
+        }
+        //no item slot found
+        return null;
+    }
+    //unfortunately i think this is the safest route to go
+    //im pretty hyped to see if this works
+    public bool AddStackedItem(Item item)
+    {
+        //alright this is sorta up for debate
+        for (int i = 0; i < items.Count; i++)
+        {
+            if (!items[i].containsItem && items[i].item.name == item.name)
+            {
+                //max stack check and calcs
+                int c = items[i].item.stackSize + item.stackSize;
+                if(c <= items[i].item.maxStack)
+                {
+                    items[i].item.stackSize = c;
+                    items[i].stackSize = c;
+                    return true;
+                }
+                else if(c > items[i].item.maxStack)
+                {
+                    //well we gotta split some stacks now
+                    //honestly adrenaline is kickin in and pretty much dictating how this works
+                    //so if it doesnt then we can just remove it
+                    Item temp = CopyItem(item);
+                    temp.stackSize = c - items[i].item.maxStack;
+                    //we should do some error checking and stuff i guess
+                    AddItem(temp);
+                    items[i].item.stackSize = items[i].item.maxStack;
+                }
+                return items[i];
+            }
+            if (i == items.Count - 1)
+            {
+                //no stack found, add it to the inventory
+                //god this does seem a little unoptimized but whatevs
+                AddItem(item);
+            }
+        }
+        //no item slot found
+        return false;
+    }
+    //ignores if an item is stackable (i guess????)
+    //it kinda sucks, but i guess with stacks and stuff its probably the better option
+    public bool AddItem(Item item)
+    {
+        //alright this is sorta up for debate
+        for (int i = 0; i < items.Count; i++)
+        {
+            if (!items[i].containsItem)
+            {
+                //we have found a slot lets add an item and update some variables
+                items[i].item = CopyItem(item);
+                items[i].stackSize = item.stackSize;
+                items[i].containsItem = true;
+                return true;
+            }
+        }
+        //no open slot was found, we can probably drop an item or something
+        return false;
+    }
+    public bool EquipItem(Item item)
+    {
+        //if an item is armor or a webbon then we should find an easy was to equip it automatically
+        return true;
+    }
     public static Item CopyItem(Item obj)
     {
         if (obj == null)
@@ -36,6 +106,7 @@ public class Inventory : MonoBehaviour {
         obj.icon = tempIcon;
         return i;
     }
+
     static object ReflectProcess(object obj)
     {
         if(obj == null)

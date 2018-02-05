@@ -37,6 +37,7 @@ public enum BiomeLocator
 }
 public enum WeaponType
 {
+    None,
     ShortSword,
     LongSword,
     Pickaxe,

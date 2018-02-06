@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
 		float h = Input.GetAxis("Horizontal");
-		Debug.Log (h);
+		//Debug.Log (h);
 
 		//Add force, which accelerates and gibs velocity
 		if (Mathf.Abs (rbody.velocity.magnitude) < movementSpeed)

@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 4107332756072048}
   - component: {fileID: 212044229742086376}
   - component: {fileID: 61720743701694690}
@@ -129,6 +130,8 @@ GameObject:
 >>>>>>> Co-op working
 =======
 =======
+=======
+>>>>>>> 708eaa2803b5c578203387658379c9245292bf24
   - component: {fileID: 4264397085332908}
   - component: {fileID: 212903703136826198}
   - component: {fileID: 61122401095569964}
@@ -141,6 +144,7 @@ GameObject:
   - component: {fileID: 114636835470887132}
   - component: {fileID: 114319769578315288}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Initial DN Net
 <<<<<<< HEAD
 >>>>>>> Initial DN Net
@@ -148,7 +152,13 @@ GameObject:
 =======
   - component: {fileID: 114488870831412912}
 >>>>>>> Network commit
+<<<<<<< HEAD
 >>>>>>> Network commit
+=======
+=======
+  - component: {fileID: 114488870831412912}
+>>>>>>> 708eaa2803b5c578203387658379c9245292bf24
+>>>>>>> Prebase 2/6
   m_Layer: 0
   m_Name: PLAYER
   m_TagString: Player
@@ -257,10 +267,13 @@ CapsuleCollider2D:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Co-op working
 =======
 >>>>>>> Initial DN Net
+=======
+>>>>>>> Prebase 2/6
 =======
 >>>>>>> Co-op working
 =======
@@ -300,6 +313,9 @@ CapsuleCollider2D:
 =======
 --- !u!114 &114080057778451738
 >>>>>>> Initial DN Net
+=======
+--- !u!114 &114080057778451738
+>>>>>>> 708eaa2803b5c578203387658379c9245292bf24
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -307,6 +323,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1679944476879366}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: f8d80b79df911154da1f30008129c00a, type: 3}
   m_Name: 
@@ -386,6 +403,9 @@ MonoBehaviour:
 =======
   m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
 >>>>>>> Initial DN Net
+=======
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+>>>>>>> 708eaa2803b5c578203387658379c9245292bf24
   m_Name: 
   m_EditorClassIdentifier: 
   m_SceneId:

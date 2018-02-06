@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Item : MonoBehaviour {
+public class Item{
 
     public int localID;
     public string name;
@@ -29,6 +29,7 @@ public class Item : MonoBehaviour {
     //files for this kinda stuff, EVERYTHING is gonna be crammed here. IIRC since this is a 
     //template all the empty stuff will be unused.
     //also ill make it nullable just incase we want to display a 0 value to the screen 
+    //well nullable is out the window becuase fuck gui scripts
 
     public WeaponSkill primarySkill, secondarySkill;
     public ItemSkill[] itemSkills;
@@ -37,14 +38,14 @@ public class Item : MonoBehaviour {
     public int damage;
     public int minDamage;
     public int maxDamage;
-    public int? AttackRate;
-    public int? Range;
+    public int AttackRate;
+    public int Range;
 
     //Armor Stats
-    public int? Armor;
-    public int? Weight;
+    public int Armor;
+    public int Weight;
     //totally just spitballin here, requires discussion
-    public int? FireResistance;
-    public int? ShockResistance;
+    public int FireResistance;
+    public int ShockResistance;
     
 }

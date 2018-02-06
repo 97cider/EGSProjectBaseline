@@ -7,6 +7,7 @@ using UnityEngine;
 public class EquipmentSlot : MonoBehaviour {
     //im guess the player??
     //for triggering changes and shiet
+    public bool containsItem;
     public Item item;
     public EquipmentType equipmentType;
     public Inventory inventory;

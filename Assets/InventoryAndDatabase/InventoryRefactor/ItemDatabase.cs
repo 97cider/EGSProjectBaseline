@@ -45,9 +45,4 @@ public class ItemDatabase : MonoBehaviour {
         item.damage = Random.Range(item.minDamage, item.maxDamage);
         return item;
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

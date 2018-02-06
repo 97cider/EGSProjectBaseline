@@ -10,7 +10,12 @@
    QuestItem
 
 }
-
+public enum ItemToGenerate
+{
+    Weapon,
+    armor,
+    other
+}
 public enum SlotType
 {
     inventory,

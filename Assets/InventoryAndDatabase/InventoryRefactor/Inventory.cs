@@ -8,6 +8,7 @@ using UnityEngine.Events;
 using System.Reflection;
 
 public class Inventory : MonoBehaviour {
+    public List<EquipmentSlot> eqSlots;
     public List<InventorySlot> items;
     //this might be obsolete, as it would prolly work better to make it equal 
     //to the AddStackedItem code for consistency and similarity
@@ -86,7 +87,26 @@ public class Inventory : MonoBehaviour {
     public bool EquipItem(Item item)
     {
         //if an item is armor or a webbon then we should find an easy was to equip it automatically
-        return true;
+        for(int i  = 0; i < eqSlots.Count; i++)
+        {
+            //make it so that you can only equip a helmet in a helmet slot 
+            if(item.isEquipable && item.itemType == eqSlots[i].equipmentType)
+            {
+                if (eqSlots[i].containsItem)
+                {
+                    //duplicate the old item and send it back to the inventory
+                    Item temp = CopyItem(eqSlots[i].item);
+                    AddItem(temp);
+                }
+                //this will prolly just overwrite the item
+                //i dont see a problem with this, unless networking comes into play
+                //as i think you can dupe items this way but whatevs
+                eqSlots[i].item = CopyItem(item);
+                eqSlots[i].containsItem = true;
+                return true;
+            }
+        }
+        return false;
     }
     public static Item CopyItem(Item obj)
     {

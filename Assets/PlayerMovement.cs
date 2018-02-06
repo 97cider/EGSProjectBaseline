@@ -17,7 +17,6 @@ public class PlayerMovement : MonoBehaviour
         //alright, well we know that the player will start is a specific spot for now, we will have to change this when saving/loading is introduced
         //oh god i hope this is serializable
         horizontalMult = 8f;
-
         PlayerStates.Instance.Horizontal = Horizontal.idle;
         PlayerStates.Instance.Vertical = Vertical.OnGround;
         PlayerStates.Instance.DirectionFacing = DirectionFacing.Right;
@@ -45,12 +44,17 @@ public class PlayerMovement : MonoBehaviour
         if(horizontalMult != 0)
         {
             //flip that sprite
+           
             transform.localScale = new Vector3(horizontalMult, 1, 1);
             PlayerStates.Instance.DirectionFacing = (DirectionFacing)horizontalMult;
+            if(rbody.velocity.y == 0)
+            {
+                AnimatorComponent.Play("CharacterRun");
+            }
         }
         if(horizontalMult == 0)
         {
-            //play an idle animation or something i guess
+            AnimatorComponent.Play("CharacterIdl");
         }
         if (Input.GetButtonDown("Jump"))
         {
@@ -59,6 +63,10 @@ public class PlayerMovement : MonoBehaviour
         if(rbody.velocity.y == 0)
         {
             PlayerStates.Instance.Vertical = Vertical.OnGround;
+        }
+        else
+        {
+            AnimatorComponent.Play("CharacterJump");
         }
     }
     private void MovementAbility()

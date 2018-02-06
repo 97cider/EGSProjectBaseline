@@ -5316,7 +5316,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.8703704
+  orthographic size: 1.4351852
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -13861,6 +13861,7 @@ GameObject:
   - component: {fileID: 1835021963}
   - component: {fileID: 1835021962}
   - component: {fileID: 1835021961}
+  - component: {fileID: 1835021967}
   m_Layer: 0
   m_Name: PLAYER
   m_TagString: Untagged
@@ -13959,11 +13960,11 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.051421016, y: 0.0038955212}
+  m_Offset: {x: -0.051421016, y: -0.03}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.25925925, y: 0.25925925}
+    oldSize: {x: 0.28, y: 0.33}
     newSize: {x: 0.25925925, y: 0.25925925}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -14004,7 +14005,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2ccf7712dbe03e0429d73207cb7d598f, type: 3}
+  m_Sprite: {fileID: 21300018, guid: 8164ed6bc3393a04d98046437f954845, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -14014,6 +14015,23 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!95 &1835021967
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1835021959}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fd48fec48e1374447bb06e9a2ba9efcf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1838563646
 GameObject:
   m_ObjectHideFlags: 0

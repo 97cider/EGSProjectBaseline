@@ -1,13 +1,15 @@
 ﻿public enum EquipmentType
 {
    Weapon,
+   Armor,
    Head,
    Chest,
    Legs,
    GrapplingHook,
    Consumable,
    CraftingMaterial,
-   QuestItem
+   QuestItem,
+   Other
 
 }
 public enum ItemToGenerate

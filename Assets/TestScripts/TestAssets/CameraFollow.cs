@@ -24,8 +24,8 @@ public class CameraFollow : MonoBehaviour {
             //for example there should be instances where the character is at the top of the screen, and some where he is at the botton
             //top of a cliff, bottom of a pit, etc
             //maximize screenspace in relevancy to the direction the player must be going (ie artificially direct the player where to go by screen size)
-
-			transform.position = Vector3.Lerp(transform.position, new Vector3(Mathf.Clamp(target.position.x, minX, maxX), Mathf.Clamp(target.position.y + heightOffset, minY, maxY), depth), 0.1f);
+            transform.position = Vector3.Lerp(transform.position, new Vector3(Mathf.Clamp(target.position.x, minX, maxX), 0, depth), 0.1f);
+           // transform.position = Vector3.Lerp(transform.position, new Vector3(Mathf.Clamp(target.position.x, minX, maxX), Mathf.Clamp(target.position.y + heightOffset, minY, maxY), depth), 0.1f);
         }
     }
 }

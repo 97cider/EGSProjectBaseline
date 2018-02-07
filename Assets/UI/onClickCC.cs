@@ -7,7 +7,8 @@ public class onClickCC : MonoBehaviour {
     public GameObject ccScreen, ccCreator, ccOptions;
 	// Use this for initialization
     public void onClickChar() {
-        ccScreen.gameObject.SetActive(false);
+        ccOptions.gameObject.SetActive(false);
+        ccScreen.gameObject.SetActive(true);
         Debug.Log("Clear UI");
     }
     public void onClickMaker() {
@@ -15,7 +16,8 @@ public class onClickCC : MonoBehaviour {
         Debug.Log("Create UI"); 
     }
     public void onClickOptions() {
-        ccOptions.gameObject.SetActive(true);
+        ccOptions.gameObject.SetActive(false);
+        ccCreator.gameObject.SetActive(true);
         Debug.Log("Switch to Options");
     }
 

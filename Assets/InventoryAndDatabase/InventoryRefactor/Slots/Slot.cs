@@ -9,7 +9,4 @@ public class Slot : MonoBehaviour {
     public Image icon;
     public Text stackText;
     public int stackSize;
-
-
-
 }

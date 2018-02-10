@@ -11,7 +11,6 @@ public class Inventory : MonoBehaviour {
     public int inv_size;
     public int equip_slots;
     
-
     public List<EquipmentSlot> eqSlots;
     public List<InventorySlot> items;
 

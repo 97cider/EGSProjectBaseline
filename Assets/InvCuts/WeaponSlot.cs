@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class WeaponSlot : Slot{
+public class WeaponSlot : OldSlot{
     public bool isEquipped;
     public Weapon weapon;
     public Text damage, firerate, accuracy;

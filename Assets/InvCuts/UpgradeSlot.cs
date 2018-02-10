@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class UpgradeSlot : Slot {
+public class UpgradeSlot : OldSlot {
     public Upgrade upgrade;
     public Text stackText;
     public int currentStack = 0;

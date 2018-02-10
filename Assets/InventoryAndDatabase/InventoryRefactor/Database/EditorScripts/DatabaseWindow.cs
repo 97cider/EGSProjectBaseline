@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class InventoryWindow : EditorWindow {
+public class DatabaseWindow : EditorWindow {
     //this whole script is gonna be real lazy
     //im just gonna pretty much look up how to do all of this and then 
     //just cram it into here, because tbh i have no idea how this gon work
@@ -24,14 +24,14 @@ public class InventoryWindow : EditorWindow {
         updateItem
     }
     private WindowAction windowAction;
-    [MenuItem ("Inventory/Items")]
+    [MenuItem ("Database/Items")]
     static void Init()
     {
 
         //this is kinda the only reason why i think this is a good idea
         itemDB = (ItemDatabase)Resources.Load("ItemDatabase", typeof(ItemDatabase)) as ItemDatabase;
-        EditorWindow.GetWindow(typeof(InventoryWindow));
-        EditorWindow.GetWindow(typeof(InventoryWindow)).minSize = new Vector2(200, 400);
+        EditorWindow.GetWindow(typeof(DatabaseWindow));
+        EditorWindow.GetWindow(typeof(DatabaseWindow)).minSize = new Vector2(200, 400);
     }
     void OnEnable()
     {

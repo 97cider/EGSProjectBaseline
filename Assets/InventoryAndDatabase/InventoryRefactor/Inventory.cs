@@ -8,8 +8,17 @@ using UnityEngine.Events;
 using System.Reflection;
 
 public class Inventory : MonoBehaviour {
+    public int inv_size;
+    public int equip_slots;
+    
+
     public List<EquipmentSlot> eqSlots;
     public List<InventorySlot> items;
+
+    //public HandSlot left;
+    //public HandSlot right;
+
+
     //this might be obsolete, as it would prolly work better to make it equal 
     //to the AddStackedItem code for consistency and similarity
     public InventorySlot GetUsableSlot()

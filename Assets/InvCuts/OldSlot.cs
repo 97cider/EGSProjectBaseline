@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class Slot : Button
+public class OldSlot : Button
 {
     public Image icon;
     public bool isOccupied;

@@ -45,4 +45,6 @@ public class ItemDatabase : MonoBehaviour {
         item.damage = Random.Range(item.minDamage, item.maxDamage);
         return item;
     }
+
+
 }

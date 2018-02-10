@@ -52,8 +52,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - localID: 0
-    name: tt
+  - localID: 1
+    name: 
     itemRarity: 0
     value: 0
     isStackable: 0
@@ -81,7 +81,7 @@ MonoBehaviour:
     Weight: 0
     FireResistance: 0
     ShockResistance: 0
-  - localID: 1
+  - localID: 2
     name: 
     itemRarity: 0
     value: 0
@@ -96,6 +96,35 @@ MonoBehaviour:
     itemLocation: 0
     itemType: 0
     weaponType: 0
+    consumableType: 0
+    icon: {fileID: 0}
+    primarySkill: {fileID: 0}
+    secondarySkill: {fileID: 0}
+    itemSkills: []
+    damage: 0
+    minDamage: 0
+    maxDamage: 0
+    AttackRate: 0
+    Range: 0
+    Armor: 0
+    Weight: 0
+    FireResistance: 0
+    ShockResistance: 0
+  - localID: 3
+    name: test
+    itemRarity: 0
+    value: 3
+    isStackable: 0
+    stackSize: 0
+    maxStack: 0
+    isConsumable: 0
+    isEquipable: 1
+    description: test description
+    descriptionHeader: test tooltip
+    worldObject: {fileID: 0}
+    itemLocation: 0
+    itemType: 0
+    weaponType: 6
     consumableType: 0
     icon: {fileID: 0}
     primarySkill: {fileID: 0}

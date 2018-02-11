@@ -54,7 +54,15 @@ public class PlayerMovement : MonoBehaviour
         }
         if(horizontalMult == 0)
         {
-            AnimatorComponent.Play("CharacterIdl");
+            if (rbody.velocity.y != 0)
+            {
+                AnimatorComponent.Play("CharacterJump");
+
+            }
+            else
+            {
+                AnimatorComponent.Play("CharacterIdl");
+            }
         }
         if (Input.GetButtonDown("Jump"))
         {

@@ -1,12 +1,13 @@
 fileFormatVersion: 2
 guid: 7e43cb80ee24e614fa351a7f21f98fbc
-timeCreated: 1518337028
+timeCreated: 1518390664
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: HomebaseExtras_0
     21300002: HomebaseExtras_1
     21300004: HomebaseExtras_2
+    21300006: HomebaseExtras_3
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -102,7 +103,7 @@ TextureImporter:
         width: 51
         height: 68
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -116,7 +117,7 @@ TextureImporter:
         width: 29
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -130,7 +131,21 @@ TextureImporter:
         width: 640
         height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: HomebaseExtras_3
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 218
+        width: 145
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

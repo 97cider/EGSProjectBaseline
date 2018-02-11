@@ -1,4 +1,17 @@
-﻿public enum EquipmentType
+﻿public enum InteractType
+{
+    Search,
+    Open,
+    Travel,
+    Talk
+}
+public enum InteractProcess
+{
+    Instant,
+    FadeToBlack,
+    Duration
+}
+public enum EquipmentType
 {
    Weapon,
    Armor,

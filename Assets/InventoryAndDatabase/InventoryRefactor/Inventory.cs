@@ -14,9 +14,21 @@ public class Inventory : MonoBehaviour {
     public List<EquipmentSlot> eqSlots;
     public List<InventorySlot> items;
 
-    //public HandSlot left;
-    //public HandSlot right;
+    public GameObject invGUI;
+    public Canvas invCanvas;
 
+    public void Awake()
+    {
+        invCanvas = invGUI.GetComponent<Canvas>();
+    }
+
+    public void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.I))
+        {
+            invGUI.SetActive(!invGUI.activeInHierarchy);
+        }
+    }
 
     //this might be obsolete, as it would prolly work better to make it equal 
     //to the AddStackedItem code for consistency and similarity
@@ -33,6 +45,7 @@ public class Inventory : MonoBehaviour {
         //no item slot found
         return null;
     }
+
     //unfortunately i think this is the safest route to go
     //im pretty hyped to see if this works
     public bool AddStackedItem(Item item)
@@ -73,6 +86,7 @@ public class Inventory : MonoBehaviour {
         //no item slot found
         return false;
     }
+
     //ignores if an item is stackable (i guess????)
     //it kinda sucks, but i guess with stacks and stuff its probably the better option
     public bool AddItem(Item item)
@@ -92,6 +106,7 @@ public class Inventory : MonoBehaviour {
         //no open slot was found, we can probably drop an item or something
         return false;
     }
+
     public bool EquipItem(Item item)
     {
         //if an item is armor or a webbon then we should find an easy was to equip it automatically
@@ -116,6 +131,7 @@ public class Inventory : MonoBehaviour {
         }
         return false;
     }
+
     public static Item CopyItem(Item obj)
     {
         if (obj == null)

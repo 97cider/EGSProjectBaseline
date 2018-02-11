@@ -18,7 +18,7 @@ public class Interaction : MonoBehaviour
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log(eventData);
+        Debug.Log("Clicked");
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -39,6 +39,7 @@ public class Interaction : MonoBehaviour
     public void OnDrag(PointerEventData eventData)
     {
         Debug.Log("Dragging");
+        
     }
 
     public void OnEndDrag(PointerEventData eventData)

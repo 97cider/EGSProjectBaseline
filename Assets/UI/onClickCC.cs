@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class onClickCC : MonoBehaviour {
 
-    public GameObject ccScreen, ccCreator, ccOptions;
+    public GameObject ccScreen, ccCreator, ccOptions, charList;
 	// Use this for initialization
     public void onClickChar() {
         ccOptions.gameObject.SetActive(false);
@@ -19,6 +19,12 @@ public class onClickCC : MonoBehaviour {
         ccOptions.gameObject.SetActive(false);
         ccCreator.gameObject.SetActive(true);
         Debug.Log("Switch to Options");
+    }
+    public void onClickList() {
+        ccOptions.gameObject.SetActive(false);
+        ccCreator.gameObject.SetActive(false);
+        charList.gameObject.SetActive(true);
+        Debug.Log("Switch to list of characters");
     }
 
 }

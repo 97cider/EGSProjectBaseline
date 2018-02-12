@@ -14,21 +14,7 @@ public class Inventory : MonoBehaviour {
     public List<EquipmentSlot> eqSlots;
     public List<InventorySlot> items;
 
-    public GameObject invGUI;
-    public Canvas invCanvas;
-
-    public void Awake()
-    {
-        invCanvas = invGUI.GetComponent<Canvas>();
-    }
-
-    public void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.I))
-        {
-            invGUI.SetActive(!invGUI.activeInHierarchy);
-        }
-    }
+    
 
     //this might be obsolete, as it would prolly work better to make it equal 
     //to the AddStackedItem code for consistency and similarity

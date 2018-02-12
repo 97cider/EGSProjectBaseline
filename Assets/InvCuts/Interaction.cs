@@ -15,6 +15,20 @@ public class Interaction : MonoBehaviour
     //Color target = Color.red;
 
     public Slot slot;
+    public Inventory invController;
+
+    public void Awake()
+    {
+        invController = GameObject.Find("InventoryController").GetComponent<Inventory>();
+    }
+
+    public void Start()
+    {
+        for(int i = 0; i < invController.inv_size; i++)
+        {
+
+        }
+    }
 
     public void OnPointerClick(PointerEventData eventData)
     {

@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.Events;
 using System.Reflection;
 
+[Serializable]
 public class Inventory : MonoBehaviour {
     public int inv_size;
     public int equip_slots;

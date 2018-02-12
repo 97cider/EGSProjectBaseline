@@ -1,0 +1,15 @@
+Where are individual game data being stored
+	Component or an InventoryController(stored on player)
+	
+What does the inventory look like
+	functionality
+		left click action(use)
+		right click action(drop/equip)
+		hover(tool tips...etc...)
+		4 button hotkey system(later)
+	structure
+		grid number of slots
+	etc
+	
+Gear/Consumables
+	

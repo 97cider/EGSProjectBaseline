@@ -217,6 +217,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114227844963157138, guid: 201ea17dde36ee24093b6a1dd6efc49b,
+        type: 2}
+      propertyPath: items.Array.size
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4912575946680384, guid: 201ea17dde36ee24093b6a1dd6efc49b, type: 2}
       propertyPath: m_LocalPosition.x
       value: 357.5
@@ -248,6 +253,11 @@ Prefab:
     - target: {fileID: 4912575946680384, guid: 201ea17dde36ee24093b6a1dd6efc49b, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114227844963157138, guid: 201ea17dde36ee24093b6a1dd6efc49b,
+        type: 2}
+      propertyPath: inv_size
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 201ea17dde36ee24093b6a1dd6efc49b, type: 2}
@@ -395,10 +405,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e76a2f52884763342af148a10bebd7bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inv_size: 0
+  inv_size: 20
   equip_slots: 0
   eqSlots: []
-  items: []
+  items:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &2026845054
 Transform:
   m_ObjectHideFlags: 0

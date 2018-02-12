@@ -5,7 +5,7 @@ using UnityEngine;
 public class InventoryGUI : MonoBehaviour {
 
     private GameObject inventoryGUI;
-    private GameObject inventoryController;
+    private GameObject player;
     private Inventory inv;
     public GameObject slot;
 
@@ -39,8 +39,8 @@ public class InventoryGUI : MonoBehaviour {
     private void initGui()
     {
         inventoryGUI = GameObject.Find("InventoryGUI");
-        inventoryController = GameObject.Find("InventoryController");
-        inv = inventoryController.GetComponent<Inventory>();
+        player = GameObject.Find("Player");
+        inv = player.GetComponent<Inventory>();
         invCanvas = inventoryGUI.GetComponent<Canvas>();
 
         float last_x = initial_x;

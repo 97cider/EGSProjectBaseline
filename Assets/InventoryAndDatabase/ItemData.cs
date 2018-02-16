@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [System.Serializable]
-class ItemData
+public class ItemData
 {
     public ItemData(Item item)
     {
@@ -16,7 +16,7 @@ class ItemData
         isEquipable = item.isEquipable;
         description = item.description;
         descriptionHeader = item.descriptionHeader;
-        worldObject = item.worldObject;
+       //worldObject = item.worldObject;
         itemLocation = item.itemLocation;
         itemType = item.itemType;
         weaponType = item.weaponType;
@@ -52,7 +52,7 @@ class ItemData
     public string description;
     public string descriptionHeader;
 
-    public GameObject worldObject;
+    //public GameObject worldObject;
 
     public BiomeLocator itemLocation;
     public EquipmentType itemType;

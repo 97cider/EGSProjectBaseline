@@ -5,6 +5,46 @@ using UnityEngine;
 [System.Serializable]
 public class Item{
 
+    public Item() { }
+
+    public Item(ItemData itemData)
+    {
+        localID = itemData.localID;
+        name = itemData.name;
+        itemRarity = itemData.itemRarity;
+        value = itemData.value;
+        isStackable = itemData.isStackable;
+        stackSize = itemData.stackSize;
+        maxStack = itemData.maxStack;
+        isConsumable = itemData.isConsumable;
+        isEquipable = itemData.isEquipable;
+        description = itemData.description;
+        descriptionHeader = itemData.descriptionHeader;
+        //worldObject = itemData.worldObject;
+        itemLocation = itemData.itemLocation;
+        itemType = itemData.itemType;
+        weaponType = itemData.weaponType;
+        consumableType = itemData.consumableType;
+        primarySkill = itemData.primarySkill;
+        secondarySkill = itemData.secondarySkill;
+        itemSkills = itemData.itemSkills;
+        damage = itemData.damage;
+        minDamage = itemData.minDamage;
+        maxDamage = itemData.maxDamage;
+        AttackRate = itemData.AttackRate;
+        Range = itemData.Range;
+        Armor = itemData.Armor;
+        Weight = itemData.Weight;
+        FireResistance = itemData.FireResistance;
+        ShockResistance = itemData.ShockResistance;
+        
+    }
+
+    public static explicit operator Item(ItemData itemData)
+    {
+        return new Item(itemData);
+    }
+
     public int localID;
     public string name;
     public ItemRarity itemRarity;

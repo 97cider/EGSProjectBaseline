@@ -15,9 +15,12 @@ public class Inventory : MonoBehaviour {
     public List<Item> eqSlots;
     public List<Item> items;
 
+    bool load_me = true;
+
     public void Start()
     {
-        Load();
+        if(load_me)
+            Load();
     }
 
     public void Save()
@@ -26,6 +29,7 @@ public class Inventory : MonoBehaviour {
         FileStream file = File.Create(Application.persistentDataPath + "/Inventory.dat");
 
         List<ItemData> serializedInv = new List<ItemData>();
+        serializedInv.Capacity = 20;
 
         for(int i = 0; i < items.Capacity; i++)
         {
@@ -41,6 +45,14 @@ public class Inventory : MonoBehaviour {
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Open(Application.persistentDataPath + "/Inventory.dat", FileMode.Open);
         List<ItemData> data = (List<ItemData>)bf.Deserialize(file);
+
+        Debug.Log(data.Capacity);
+
+        for(int i = 0; i < data.Capacity; i++)
+        {
+            items[i] = (Item)data[i];
+        }
+
         file.Close();
     }
 

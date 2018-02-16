@@ -6,117 +6,47 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
 using System.Reflection;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 [Serializable]
 public class Inventory : MonoBehaviour {
-    public int inv_size;
-    public int equip_slots;
     
-    public List<EquipmentSlot> eqSlots;
-    public List<InventorySlot> items;
+    public List<Item> eqSlots;
+    public List<Item> items;
 
-    
-
-    //this might be obsolete, as it would prolly work better to make it equal 
-    //to the AddStackedItem code for consistency and similarity
-    public InventorySlot GetUsableSlot()
+    public void Start()
     {
-        //alright this is sorta up for debate
-        for(int i = 0; i < items.Count; i++)
-        {
-            if (!items[i].containsItem)
-            {
-                return items[i];
-            }
-        }
-        //no item slot found
-        return null;
+        Load();
     }
 
-    //unfortunately i think this is the safest route to go
-    //im pretty hyped to see if this works
-    public bool AddStackedItem(Item item)
+    public void Save()
     {
-        //alright this is sorta up for debate
-        for (int i = 0; i < items.Count; i++)
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file = File.Create(Application.persistentDataPath + "/Inventory.dat");
+
+        List<ItemData> serializedInv = new List<ItemData>();
+
+        for(int i = 0; i < items.Capacity; i++)
         {
-            if (!items[i].containsItem && items[i].item.name == item.name)
-            {
-                //max stack check and calcs
-                int c = items[i].item.stackSize + item.stackSize;
-                if(c <= items[i].item.maxStack)
-                {
-                    items[i].item.stackSize = c;
-                    items[i].stackSize = c;
-                    return true;
-                }
-                else if(c > items[i].item.maxStack)
-                {
-                    //well we gotta split some stacks now
-                    //honestly adrenaline is kickin in and pretty much dictating how this works
-                    //so if it doesnt then we can just remove it
-                    Item temp = CopyItem(item);
-                    temp.stackSize = c - items[i].item.maxStack;
-                    //we should do some error checking and stuff i guess
-                    AddItem(temp);
-                    items[i].item.stackSize = items[i].item.maxStack;
-                }
-                return items[i];
-            }
-            if (i == items.Count - 1)
-            {
-                //no stack found, add it to the inventory
-                //god this does seem a little unoptimized but whatevs
-                AddItem(item);
-            }
+            serializedInv.Add((ItemData)items[i]);
         }
-        //no item slot found
-        return false;
+
+        bf.Serialize(file, serializedInv);
+        file.Close();
     }
 
-    //ignores if an item is stackable (i guess????)
-    //it kinda sucks, but i guess with stacks and stuff its probably the better option
-    public bool AddItem(Item item)
+    public void Load()
     {
-        //alright this is sorta up for debate
-        for (int i = 0; i < items.Count; i++)
-        {
-            if (!items[i].containsItem)
-            {
-                //we have found a slot lets add an item and update some variables
-                items[i].item = CopyItem(item);
-                items[i].stackSize = item.stackSize;
-                items[i].containsItem = true;
-                return true;
-            }
-        }
-        //no open slot was found, we can probably drop an item or something
-        return false;
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file = File.Open(Application.persistentDataPath + "/Inventory.dat", FileMode.Open);
+        List<ItemData> data = (List<ItemData>)bf.Deserialize(file);
+        file.Close();
     }
 
-    public bool EquipItem(Item item)
+    public void OnApplicationQuit()
     {
-        //if an item is armor or a webbon then we should find an easy was to equip it automatically
-        for(int i  = 0; i < eqSlots.Count; i++)
-        {
-            //make it so that you can only equip a helmet in a helmet slot 
-            if(item.isEquipable && item.itemType == eqSlots[i].equipmentType)
-            {
-                if (eqSlots[i].containsItem)
-                {
-                    //duplicate the old item and send it back to the inventory
-                    Item temp = CopyItem(eqSlots[i].item);
-                    AddItem(temp);
-                }
-                //this will prolly just overwrite the item
-                //i dont see a problem with this, unless networking comes into play
-                //as i think you can dupe items this way but whatevs
-                eqSlots[i].item = CopyItem(item);
-                eqSlots[i].containsItem = true;
-                return true;
-            }
-        }
-        return false;
+        Save();
     }
 
     public static Item CopyItem(Item obj)

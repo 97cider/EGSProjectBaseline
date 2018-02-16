@@ -46,11 +46,9 @@ public class InventoryGUI : MonoBehaviour {
         float last_x = initial_x;
         float last_y = initial_y;
 
-        for (int i = 1; i <= inv.inv_size; i++)
-        { 
+        for (int i = 1; i <= inv.items.Capacity; i++)
+        {
             GameObject temp = Instantiate(slot);
-
-            temp.AddComponent<Slot>();
             
             RectTransform rtemp = temp.GetComponent<RectTransform>();
             temp.transform.SetParent(inventoryGUI.transform);

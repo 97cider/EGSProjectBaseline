@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class WeaponSkill : MonoBehaviour
 {
     //code for weapon actions and shit

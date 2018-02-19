@@ -49,7 +49,9 @@ public class InventoryGUI : MonoBehaviour {
         for (int i = 1; i <= inv.items.Capacity; i++)
         {
             GameObject temp = Instantiate(slot);
-            
+            GUISlot gslot = temp.GetComponent<GUISlot>();
+            gslot.index = i - 1;
+
             RectTransform rtemp = temp.GetComponent<RectTransform>();
             temp.transform.SetParent(inventoryGUI.transform);
 
@@ -62,22 +64,6 @@ public class InventoryGUI : MonoBehaviour {
                 last_x = initial_x;
             }
         }
-
-
-        //for (int i = 0; i < inv_rows; i++)
-        //{
-        //    for (int j = 0; j < inv_cols; j++)
-        //    {
-        //        GameObject temp = Instantiate(slot);
-        //        RectTransform rtemp = temp.GetComponent<RectTransform>();
-        //        temp.transform.SetParent(inventoryGUI.transform);
-
-        //        rtemp.anchoredPosition = new Vector3(last_x, last_y);
-        //        last_x = last_x + width + x_gap;
-        //    }
-        //    last_y = last_y - height - y_gap;
-        //    last_x = initial_x;   
-        //}
     }
 
     private void updateGui()

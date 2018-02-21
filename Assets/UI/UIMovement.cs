@@ -11,6 +11,7 @@ public class UIMovement : MonoBehaviour {
     private float beginTime;
     private float lengthToTravel;
     public Vector3 i;
+    public Animator animator;
     public void Start() {
         beginTime = Time.time;
         lengthToTravel = Vector3.Distance(MainCameraPosition.position, DesiredScenePosition.position);
@@ -20,12 +21,17 @@ public class UIMovement : MonoBehaviour {
         Transform currentLocation = MainCameraPosition;
         float distance = (Time.time - beginTime) * flySpeed;
         float travelDiv = distance / lengthToTravel;
-        while ((currentLocation.position != DesiredScenePosition.position) && (currentLocation.position.x < DesiredScenePosition.position.x))
+        while ((currentLocation.position != DesiredScenePosition.position) && (Mathf.Ceil(currentLocation.position.x) < Mathf.Ceil(DesiredScenePosition.position.x)))
         {
+            Debug.Log(currentLocation.position.x + " : " + DesiredScenePosition.position.x);
             sceneCam.transform.position = Vector3.Lerp(currentLocation.position, DesiredScenePosition.position, flySpeed * Time.deltaTime);
             currentLocation.position = sceneCam.transform.position;
-
         }
     }
+    public void playAnimation()
+    {
+        animator.Play("MoveCamera");
+    }
+
 
 }

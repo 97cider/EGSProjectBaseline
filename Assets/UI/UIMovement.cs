@@ -36,6 +36,13 @@ public class UIMovement : MonoBehaviour {
     {
         animator.Play("MoveMore");
     }
-
+    public void playBack()
+    {
+        animator.Play("MoveBack");
+    }
+    public void playUp()
+    {
+        animator.Play("MoveUp");
+    }
 
 }

@@ -114,6 +114,7 @@ MonoBehaviour:
   entered: 0
   inventory: {fileID: 0}
   index: 0
+  image: {fileID: 0}
 --- !u!222 &222430338357835230
 CanvasRenderer:
   m_ObjectHideFlags: 1

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-
+using UnityEngine.UI;
 public class GUISlot : MonoBehaviour,
                        IPointerExitHandler,
                        IPointerEnterHandler,
@@ -11,11 +11,18 @@ public class GUISlot : MonoBehaviour,
     public bool entered;
     public Inventory inventory;
     public int index;
+    public Image image;
+
 
     public void Start()
     {
         inventory = GameObject.Find("Player").GetComponent<Inventory>();
         entered = false;
+        image = gameObject.GetComponent<Image>();
+
+        //Assign this to whatever to change each image
+        //i.sprite = <your sprite here>;
+
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -35,5 +42,10 @@ public class GUISlot : MonoBehaviour,
             //Debug.Log(inventory.items[index].name);
             Debug.Log(eventData.button == PointerEventData.InputButton.Right);
         }
+    }
+
+    public void changeImage(Sprite change_to)
+    {
+        image.sprite = change_to;
     }
 }

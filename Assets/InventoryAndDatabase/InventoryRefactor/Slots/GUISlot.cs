@@ -32,7 +32,8 @@ public class GUISlot : MonoBehaviour,
     {
         if(entered)
         {
-            Debug.Log(inventory.items[index].name);
+            //Debug.Log(inventory.items[index].name);
+            Debug.Log(eventData.button == PointerEventData.InputButton.Right);
         }
     }
 }

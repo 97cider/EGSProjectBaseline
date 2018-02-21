@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class InventoryGUI : MonoBehaviour {
 
-    private GameObject inventoryGUI;
-    private GameObject player;
-    private Inventory inv;
+    public GameObject inventoryGUI;
+    public Inventory inv;
     public GameObject slot;
 
     public Canvas invCanvas;
@@ -33,14 +32,12 @@ public class InventoryGUI : MonoBehaviour {
         {
             inventoryGUI.SetActive(!inventoryGUI.activeInHierarchy);
         }
-
     }
 
     private void initGui()
     {
         inventoryGUI = GameObject.Find("InventoryGUI");
-        player = GameObject.Find("Player");
-        inv = player.GetComponent<Inventory>();
+        inv = GameObject.Find("Player").GetComponent<Inventory>();
         invCanvas = inventoryGUI.GetComponent<Canvas>();
 
         float last_x = initial_x;

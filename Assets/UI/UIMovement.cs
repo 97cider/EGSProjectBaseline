@@ -32,6 +32,10 @@ public class UIMovement : MonoBehaviour {
     {
         animator.Play("MoveCamera");
     }
+    public void playMore()
+    {
+        animator.Play("MoveMore");
+    }
 
 
 }
